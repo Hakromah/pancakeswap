@@ -1,0 +1,387 @@
+@use '../variables.scss' as i;
+
+.ibrahim-full-background > div:not(.ibrahim-foot) {
+    color: white; 
+}
+
+.ibrahim-full-background {
+    min-height: 1800px;
+    font-family: Arial, Helvetica, sans-serif;
+    button {
+        z-index: 4;
+    }
+}
+
+.headMiddleBackgroundColor {
+    background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
+}
+
+.ibrahim-margin {
+    margin-top: 25px;
+    padding: 0;
+}
+
+.ibrahim-head {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 450px;
+}
+
+.ibrahim-middle {
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ibrahim-middle-left {
+    height: 350px;
+    width: 650px;
+}
+
+.ibrahim-middle-right {
+    height: 700px;
+    width: auto;
+    background-color: #EEF4FF;
+    position: relative;
+}
+
+#ps-logo-icon {
+    z-index: 1;
+}
+
+#header-spaceman-container {
+    position: absolute;
+    z-index: 4;
+    width: 574px;
+    height: 574px;
+    background: transparent no-repeat center;
+    top: -5px;
+    left: 54px;
+
+    #header-spaceman {
+        width: 574px;
+
+        animation: 3s ease-in-out 2s infinite normal none running spaceman-floating;
+    }
+
+    .header-star {
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        width: 512px;
+    }
+
+    #header-star-l {
+        z-index: 5;
+        animation: 2.5s linear 3s infinite normal none running blinking-star;
+    }
+    
+    #header-star-r {
+        z-index: 5;
+        animation: 4s linear 2s infinite normal none running blinking-star;
+    }
+    
+    #header-star-top {
+        animation: 3s linear 1s infinite normal none running blinking-star;
+    }
+
+}
+
+@keyframes spaceman-floating {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    
+    50% {
+      transform: translate(5px, 10px);
+    }
+    
+    100% {
+      transform: translate(0px, 0px);
+    }
+}
+
+@keyframes blinking-star {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+.header-middle-tag, .header-middle-button {
+    position: relative;
+    left: 120px;
+    z-index: 3;
+}
+
+#middleH1Tag {
+    font-size: 55px;
+    font-weight:800;
+    width:16ch;
+    line-height: 70px;
+    color: #7645d9;
+}
+
+#middleH6Tag {
+    font-size: 20px;
+    line-height: 25px;
+    color: #280d5f;
+}
+
+#buttonRightMargin {
+    margin-right: 6px;
+    border-radius: 15px;
+    font-size: 15px;
+    height: 45px;
+    width: 160px;
+    text-align: center;
+    border: none;
+    background-color: #1fc7d4;
+    color: #fff;
+    box-shadow: 0px 0.5px black;
+    appearance: none;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+}
+
+.buttonSecondMiddle {
+    border-radius: 15px;
+    font-size: 15px;
+    height: 45px;
+    width: 130px;
+    text-align: center;
+    border: 2px solid #1fc7d4;
+    appearance: none;
+    background-color: #EEF4FF;
+    color: #1fc7d4;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+}
+
+#header-middle-border {
+    position: absolute;
+    bottom: 0px;
+}
+
+#header-curved-container {
+    position: relative;
+    background-color: none;
+    z-index: 3;
+}
+
+.ibrahim-foot {
+    height: 700px;
+    background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+}
+
+.rabbit {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 60px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: rgb(112, 22, 185);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.header-boxes-flex {
+    width: 910px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.square {
+    width: 280px;
+    height: 280px;
+    border-radius: 25px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    background-color: white;
+    box-shadow: 0px 4px rgba(231, 231, 231, 0.685);
+
+}
+
+@media  screen and (max-width: 880px) {
+    .header-boxes-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+
+
+.alignmentVerHor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.millionBillion {
+    font-size: 45px;
+    font-weight: bolder;
+    line-height: 10px;
+    color: #280d5f;
+    z-index: 1;
+}
+
+.footTexts {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #7a6eaa;
+
+    & h3:nth-child(1), & h3:nth-child(2) {
+        color:#988EBE;
+        font-weight: normal;
+    }
+}
+
+#joinText {
+    font-weight: 900;
+    color: #7a6eaa;
+}
+
+.people-icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;    
+    direction: ltr;
+    color: #7645d9;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.trade-icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: #1fc7d4;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.level-icon {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: #ed4b9e;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.number {
+    font-size: 40px;
+    font-weight: bolder;
+    height: 16px;
+    margin-top: 25px;
+    color: #280d5f;
+}
+
+.category {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.time {
+    color: #7a6eaa;
+    font-weight: bold;
+}
+
+.boxBottoms {
+    height: 85%;
+    display: grid;
+    align-items: flex-end;
+}
+
+#usersCategory {
+    color: #7645d9;
+}
+
+#tradesCategory {
+    color: #1fc7d4;
+}
+
+#stakedCategory {
+    color: #ed4b9e;
+}
+
+#footer-bottom-curve-container {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    margin-top: 0;
+    padding: 0;
+
+    svg {
+        fill: #d7caec;
+        width: 100rem;
+        height: 150%;
+        max-height: 48px;
+    }
+}

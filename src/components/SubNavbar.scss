@@ -1,0 +1,62 @@
+@use "../variables.scss" as f;
+
+
+.subHeadWraper {
+	display: grid;
+	grid-template-rows: 58% 42%;
+	background: #ffffff;
+    transition: margin-top ease-in 0.2s;
+
+	.trade-nav {
+		display: flex;
+		background: #ffffffb3;
+		justify-content: center;
+		align-self: center;
+		gap: 20px;
+		align-items: center;
+
+
+		a {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			font: 14px;
+			color: #7a6eaa;
+			height: 40px;
+			padding: 0px 10px;
+			position: relative;
+			
+			&:hover {
+				background-color: var(--nav-item-hover);
+			}
+			
+			div {
+				display: none;
+				position: absolute;
+				bottom: 0;
+				background-color: #1fc7d4;
+				width: 90%;
+				height: 4px;
+				align-self: center;
+				justify-self: flex-end;
+				margin-top: 10px;
+				margin-bottom: 0;
+				padding: 0;
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+			}
+		}
+	}
+}
+
+.selected {
+		color: #7645d9 !important;
+		font-weight: bold;
+		div {
+			display: initial !important;
+		}
+}
+
+.trade-nav-box:hover {
+	background-color: grey;
+}
